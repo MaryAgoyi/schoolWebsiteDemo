@@ -31,9 +31,6 @@ app.get('/cafeteria', (req, res)=>{
 app.get('/recreation', (req, res)=>{
     res.render("recreation", {title:"ABC Recreation"});
 })
-app.get('/apply', (req, res)=>{
-    res.render("apply", {title:"Apply now", msg: ""});
-})
 
 
 
