@@ -1,0 +1,45 @@
+<html lang="en">
+    <%- include ("./partials/head.ejs")%>
+    
+    
+    
+   <body>
+       
+    <%- include ("./partials/nav.ejs")%>
+    <section class="apply" id="apply" >
+       
+        <div class="apply-container">
+     <div class="apply-hold">
+         <div class="logopos">
+              
+        <div class="name">
+            ABC <span> UNIVERSITY</span>
+        </div> 
+        <h1>Application Portal</h1>
+    </div>
+        <div class="apply-text">
+            
+            <p>Please enter your details <br> application procedure will be sent to your email</p>
+            <p class='msg'> <%= msg%></p>
+        </div>
+        <div class="formhold">
+             
+           <form class="apply-form" id="apply-form"  action="/applyform" method="POST">
+
+            <input type="text" name="name" id="name" placeholder="Full Name" required><br>
+            <input type="text" name="email" id="email" placeholder="Email" required><br>
+            <input type="text" name="phone" id="phone" placeholder="Phone No."><br>
+            <div class="g-recaptcha" data-sitekey="6Ld1KB0bAAAAAB-3LsxP7JUNj_JujVAw6UCu28Y2"></div>
+            <br/>
+            <input class ="btn" type="submit" value="Send">
+           <form>
+    </div>
+     </div>
+        </div>
+        
+    </section>
+   
+
+    <%- include ("./partials/foot.ejs")%>
+</body>
+</html>
