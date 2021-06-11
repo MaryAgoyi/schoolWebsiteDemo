@@ -3,7 +3,7 @@ const app =express();
 const PORT =process.env.PORT || 5000;
 const bodyParser=require('body-parser');
 const request=require('request');
-const { json, response } = require("express");
+
 app.set("view engine", 'ejs');
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended:false}))
