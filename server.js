@@ -1,10 +1,13 @@
 const express =require('express');
 const app =express();
 const PORT =process.env.PORT || 5000;
-
+const bodyParser=require('body-parser');
+const fetch =require('isomorphic-fetch');
+const request=require('request');
 app.set("view engine", 'ejs');
 app.use(express.static('public'));
-
+app.use(bodyParser.urlencoded({extended:false}))
+app.use(bodyParser.json());
 app.get("/", (req, res)=>{
     res.render('index', {title:"ABC University"});
 });
@@ -32,7 +35,31 @@ app.get('/recreation', (req, res)=>{
 app.get('/apply', (req, res)=>{
     res.render("apply", {title:"Apply now", msg: ""});
 })
-
+app.post('/applyform', (req, res)=>{
+  
+    const captcha=req.body['g-recaptcha-response'];
+    const secretKey='6Ld1KB0bAAAAANx7hYnJmpXGwW42r78dWhVnHdmR';
+    const googleURL=`https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${captcha}`;
+     fetch(googleURL, {
+         method:'POST',
+     })
+  .then((response)=> response.json())
+.then((captcha_response)=>{
+  if(captcha_response.success==true){
+  
+    res.render("applydone", {title:"Apply now", msg: "" });
+  }
+ 
+  else{
+    res.render("apply", {title:"Apply now", msg: "Captcha verification failed" });
+    
+  }
+  
+})
+.catch((error)=>{
+    return res.json({ error });
+});
+});
 
 app.listen(PORT, ()=>{
         console.log(`server started at ${PORT}`);
