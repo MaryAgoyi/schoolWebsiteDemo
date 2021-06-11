@@ -1,11 +1,90 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <%- include ("./partials/head.ejs")%>
 <body>
-    <h1>hello world</h1>
+    <div class="section-home">
+       <%- include ("./partials/nav.ejs")%>
+    </div>
+</div>
+    <section class="section-programs" id='programs'>
+  
+        <div class="programText">
+           <h1>Our Programs</h1>
+            
+             </div>
+        
+        <div class="programGroup">
+            
+                <div class="programChoose">
+                    
+                        <h1>Pre-degree</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Alias eius illo sapiente consequuntur eum nulla odio 
+                            adipisci inventore harum molestias.</p>
+                    </div>
+                    <div class="programChoose">
+                    <h1>Diploma</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Alias eius illo sapiente consequuntur eum nulla odio 
+                        adipisci inventore harum molestias.</p>
+                </div>
+                <div class="programChoose">
+                <h1>Bachelor</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Alias eius illo sapiente consequuntur eum nulla odio 
+                    adipisci inventore harum molestias.</p>
+            </div>
+
+            <div class="programChoose">
+                <h1>Masters</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Alias eius illo sapiente consequuntur eum nulla odio 
+                    adipisci inventore harum molestias.</p>
+            </div>
+
+            <div class="programChoose">
+                <h1>Doctorate</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Alias eius illo sapiente consequuntur eum nulla odio 
+                    adipisci inventore harum molestias.</p>
+            </div>
+
+            <div class="programChoose">
+                <h1>Certificates</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Alias eius illo sapiente consequuntur eum nulla odio 
+                    adipisci inventore harum molestias.</p>
+            </div>
+            
+        </section>
+        <section class="contact" id="contact" >
+            <h1>Contact us</h1>
+            <div class="contact-container">
+               
+                <div class="contact-form">
+  <div class="form">
+      <label for="name">Name</label><br>
+      <input type="text" name="name" id="name" placeholder="Full Name"><br>
+      <label for="email" class="email">Email</label><br>
+      <input type="text" name="email" id="email" placeholder="Email"><br>
+      <label for="phone" class="phone">Phone No.</label><br>
+      <input type="text" name="phone" id="phone" placeholder="Phone No."><br>
+      <label for="message" class="message">Message</label> <br>
+      <textarea name="message" id="name" cols="30" rows="10" placeholder="message"></textarea>
+      <input class ="btn" type="button" value="submit">
+  </div>
+                </div>
+                
+
+            </div>
+            <div class="contact-foot">
+                <p> <i class='fas fa-phone-alt'></i> 1234567891
+                    <span>  <i class='fas fa-envelope'></i> abcuniversity@info.com</span>
+                   <span>99040, Nicosia Cyprus</span>
+               </p>
+                
+               
+            </div>
+        </section>
+        <%- include ("./partials/foot.ejs")%>
 </body>
 </html>
