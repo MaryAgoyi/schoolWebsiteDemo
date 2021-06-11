@@ -1,0 +1,117 @@
+
+
+
+.services{
+display:flex;
+flex-direction: column;
+}
+
+
+.services-body{
+    padding-top: 100px;
+    width: 100%;
+    height: 93vh;
+    display:flex;
+    flex-direction: row;
+  
+    margin-bottom: 20px;
+  
+}
+.services-body-left{
+   text-align: center;
+    flex:60%;
+    
+    margin: 0 5%;
+   margin-top: 180px;
+  
+}
+.services-body-left p{
+    
+    margin-top: 20px;
+   
+ }
+.library{
+    flex:40%;
+    background-image: url("/images/library02.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top  center;
+    overflow: hidden;
+   
+  
+}
+.transport{
+    
+        flex:40%;
+        background-image: url("/images/schoolbus01.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top  center;
+        
+        overflow: hidden;
+    
+}
+.dormitory{
+    
+    flex:40%;
+    background-image: url("/images/dorm02.jpeg");
+    
+    background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top  center;
+        overflow: hidden;
+
+}
+.recreation{
+    
+    flex:40%;
+    background-image: url("/images/recr01.jpeg");
+    
+    background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center  center;
+        overflow: hidden;
+
+}
+.cafeteria{
+    
+    flex:40%;
+    background-image: url("/images/cafe02.jpeg");
+    
+    background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+  
+        overflow: hidden;
+}
+.about{
+    flex:40%;
+    background-image: url("/images/about.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top  center;
+    overflow: hidden;
+   
+  
+}
+@media (max-width: 1068px){
+    .services-body{
+        padding-top: 100px;
+        width: 100%;
+        height: 100vh;
+        display:flex;
+        flex-direction: column;
+       
+      
+    }    
+    .services-body-left{
+        
+         flex:20%;
+        margin-top: 60px;
+       
+     } 
+     .library, .about, .cafeteria, .recreation,.dormitory, .transport {
+        flex:80%;
+        margin-top: 30px;
+     }
+}
