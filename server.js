@@ -1,13 +1,10 @@
 const express =require('express');
 const app =express();
 const PORT =process.env.PORT || 5000;
-const bodyParser=require('body-parser');
-const request=require('request');
 
 app.set("view engine", 'ejs');
 app.use(express.static('public'));
-app.use(bodyParser.urlencoded({extended:false}))
-app.use(bodyParser.json());
+
 app.get("/", (req, res)=>{
     res.render('index', {title:"ABC University"});
 });
