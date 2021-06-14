@@ -298,6 +298,60 @@ text-decoration: none;
       
        }
       
+.section-home{
+    height: 100vh;
+    width: 100%;
+    animation: picture 16s linear infinite;
+ 
+  
+
+  }
+  @keyframes picture{
+      0%{
+      /*  background: linear-gradient(rgba(4, 9, 30, 0.287),rgba(4, 12, 30, 0.459)), url(/images/school01.jpg) ;
+     */ background-image:url(/images/school01.jpg) ;
+     
+       background-size: cover;
+    background-position: bottom center;
+    background-repeat:no-repeat;
+    overflow: hidden;
+      
+      }
+      25%{
+       
+       background-image:url(/images/juction02.jpg) ;
+       background-size: cover;
+       background-position: bottom  center;
+       background-repeat:no-repeat;
+       overflow: hidden;
+   }
+      50%{
+      
+       background-image:url(/images/school05.jpg) ;
+       background-size: cover;
+      background-position: center center;
+      background-repeat:no-repeat;
+    overflow: hidden;
+       }
+      75%{
+      
+       background-image:url(/images/juction02.jpg) ;
+       background-size: cover;
+    background-position:bottom center;
+    background-repeat:no-repeat;
+    overflow: hidden;
+       }
+       100%{
+         
+         background-image:url(/images/school01.jpg) ;
+          
+            background-size: cover;
+         background-position: bottom center;
+         background-repeat:no-repeat;
+         overflow: hidden;
+           
+           }
+  }
    
 
 }
