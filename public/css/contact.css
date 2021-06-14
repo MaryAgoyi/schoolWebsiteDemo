@@ -74,8 +74,14 @@ width: 100%;
     
 }
 
-@media (max-width: 1068px){
-    
+@media (max-width: 600px){
+    .contact{
+        height: 125vh;
+        padding-top: 115px ;
+        
+        margin: auto; 
+        text-align: center;
+    }
         
         
     }
